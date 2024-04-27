@@ -18,14 +18,16 @@
     "ios": {
       "supportsTablet": true,
       "userInterfaceStyle": "automatic",
-      "requireFullScreen": true
+      "requireFullScreen": true,
+      "bundleIdentifier": "com.hirbod.nativewind-expo-router"
     },
     "android": {
       "userInterfaceStyle": "automatic",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.hirbod.nativewindexporouter"
     },
     "web": {
       "bundler": "metro",

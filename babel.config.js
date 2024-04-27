@@ -1,20 +1,21 @@
 module.exports = function (api) {
-  api.cache(true);
+  api.cache(false);
   return {
     presets: [
       [
         "babel-preset-expo",
         {
           jsxImportSource: "nativewind",
+          jsxRuntime: 'automatic',
+          lazyImports: true,
         },
       ],
       "nativewind/babel",
     ],
     plugins: [
-      // Required for expo-router
-      "expo-router/babel",
-      "@babel/plugin-proposal-export-namespace-from",
-      "react-native-reanimated/plugin",
+      ['@babel/plugin-transform-flow-strip-types'],
+      ['@babel/plugin-transform-class-properties', { loose: true }],
+      ['@babel/plugin-transform-private-methods', { loose: true }],
     ],
   };
 };
